@@ -1,6 +1,8 @@
-// var num=[1,45,6,7,8]
-// console.log(num.sort())
+var num=[1,45,6,7,8]
+console.log(num.sort())
 //construction
+var num=[1,45,6,7,8]
+console.log(num.sort())
 function Car (brand,model,price){
     this.model =model
     this.brand=brand

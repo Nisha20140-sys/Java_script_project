@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./calculator.css" />
+    <link
+      rel="stylesheet"
+      href="../font-awesome-4.7.0 2/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script src="./calculator.js"></script>
+    <!-- <script type="module" src="./CalculatorClass.js"></script> -->
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="calc-container">
+      <div class="display">
+        <div class="switch-container">
+          <div class="switch">
+          </div>
+        </div>
+        <div class="output">
+          <input id="main-display" class="result"/>
+        </div>
+      </div>
+      <div class="keypad-container">
+        <table class="keypad">
+          <tbody>
+            <tr>
+              <td><button class="key action-keys" onclick="actionKeyClickHandler('CLEAR_ALL')">AC</button></td>
+              <td><button class="key action-keys" onclick="actionKeyClickHandler('CHANGE_SIGN')" >+/-</button></td>
+              <td><button class="key action-keys" onclick="operandKeyClickHandler()" id="percent">%</button></td>
+              <td><button class="key operand" onclick="operandKeyClickHandler('DIVIDE')" id="divide">÷</button></td>
+            </tr>
+            <tr>
+                <td><button class="key num-keys" onclick="numKeyClickHandler(7)" id="block7">7</button></td>
+                <td><button class="key num-keys" onclick="numKeyClickHandler(8)" id="block8">8</button></td>
+                <td><button class="key num-keys" onclick="numKeyClickHandler(9)" id="block9">9</button></td>
+                <td><button class="key operand" onclick="operandKeyClickHandler('MULTIPLY')" id="multiply">x</button></td>
+              </tr>
+              <tr>
+                <td><button class="key num-keys" onclick="numKeyClickHandler(4)" id="block4">4</button></td>
+                <td><button class="key num-keys" onclick="numKeyClickHandler(5)" id="block5">5</button></td>
+                <td><button class="key num-keys" onclick="numKeyClickHandler(6)" id="block6">6</button></td>
+                <td><button class="key operand" onclick="operandKeyClickHandler('SUBTRACT')" id="minus">-</button></td>
+              </tr>
+              <tr>
+                <td><button class="key num-keys" onclick="numKeyClickHandler(1)" id="block1">1</button></td>
+                <td><button class="key num-keys" onclick="numKeyClickHandler(2)" id="block2">2</button></td>
+                <td><button class="key num-keys" onclick="numKeyClickHandler(3)" id="block3">3</button></td>
+                <td><button class="key operand" onclick="operandKeyClickHandler('ADD')" id="plus">+</button></td>
+              </tr>
+              <tr>  
+                <td><button class="key num-keys" onclick="undoClickHandler()" ><i class="fa fa-repeat flip-180" aria-hidden="true" id="clr"></i></button></td>
+                <td><button class="key num-keys" onclick="numKeyClickHandler(0)" id="block0">0</button></td>
+                <td><button class="key num-keys" onclick="numKeyClickHandler('.')" id="dot">.</button></td>
+                <td><button class="key operand" onclick="resultClickHandler()" id="ans">=</button></td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
